@@ -1,0 +1,32 @@
+{
+  "description": "Shporta ndërkombëtare: të njëjtat produkte (ose ekuivalente të drejtpërdrejta) me çmime reale nga supermarketet në vende të tjera. Çdo çmim duhet të ketë url, datë dhe dyqan. Plotësohet nga rutina e përditësimit.",
+  "schema": {
+    "al": "product_ids = id nga pasqyraecmimeve.al; kurse = 'Tregtari|EMRI' nga lista KURSE; generic = nënkategoria (merret çmimi më i ulët për njësi)",
+    "prices": "{ KODI_VENDIT: [ { price, currency, retailer, url, date, promo (bool), note } ] }"
+  },
+  "items": [
+    { "key": "barilla-spaghetti-5-500g", "name": "Barilla Spaghetti n.5", "size": "500 g", "category": "Makarona", "branded": true, "al": { "product_ids": [85] }, "prices": {} },
+    { "key": "de-cecco-spaghetti-12-500g", "name": "De Cecco Spaghetti n.12", "size": "500 g", "category": "Makarona", "branded": true, "al": { "product_ids": [89] }, "prices": {} },
+    { "key": "divella-flour-00-1kg", "name": "Miell Divella 00", "size": "1 kg", "category": "Miell", "branded": true, "al": { "product_ids": [63] }, "prices": {} },
+    { "key": "lurpak-butter-200g", "name": "Gjalpë Lurpak", "size": "200 g", "category": "Gjalpë", "branded": true, "al": { "product_ids": [169] }, "prices": {} },
+    { "key": "president-butter-200g", "name": "Gjalpë Président pa kripë", "size": "200 g", "category": "Gjalpë", "branded": true, "al": { "product_ids": [161] }, "prices": {} },
+    { "key": "parmareggio-butter-200g", "name": "Gjalpë Parmareggio", "size": "200 g", "category": "Gjalpë", "branded": true, "al": { "product_ids": [162] }, "prices": {} },
+    { "key": "parmalat-uht-milk-1l", "name": "Qumësht Parmalat UHT (1.5–1.6%)", "size": "1 l", "category": "Qumësht", "branded": true, "al": { "product_ids": [11] }, "prices": {} },
+    { "key": "granarolo-milk-1l", "name": "Qumësht Granarolo (pjesërisht i skremuar)", "size": "1 l", "category": "Qumësht", "branded": true, "al": { "product_ids": [25] }, "prices": {} },
+    { "key": "muller-white-yogurt-500g", "name": "Kos Müller i bardhë", "size": "500 g", "category": "Kos", "branded": true, "al": { "product_ids": [137] }, "prices": {} },
+    { "key": "fage-total-5-500g", "name": "Kos Fage Total 5%", "size": "500 g", "category": "Kos", "branded": true, "al": { "product_ids": [131] }, "prices": {} },
+    { "key": "eggs-10-m", "name": "Vezë M (më të lirat)", "size": "10 copë", "category": "Vezë", "branded": false, "al": { "generic": "Vezë" }, "prices": {} },
+    { "key": "sunflower-oil-1l", "name": "Vaj luledielli (më i liri)", "size": "1 l", "category": "Vaj", "branded": false, "al": { "generic": "Vaj" }, "prices": {} },
+    { "key": "sugar-1kg", "name": "Sheqer i bardhë (më i liri)", "size": "1 kg", "category": "Sheqer", "branded": false, "al": { "generic": "Sheqer" }, "prices": {} },
+    { "key": "rice-long-grain-1kg", "name": "Oriz kokërrgjatë (më i liri)", "size": "1 kg", "category": "Oriz", "branded": false, "al": { "generic": "Oriz" }, "prices": {} },
+    { "key": "flour-1kg", "name": "Miell gruri (më i liri)", "size": "1 kg", "category": "Miell", "branded": false, "al": { "generic": "Miell" }, "prices": {} },
+    { "key": "whole-chicken-1kg", "name": "Pulë e freskët e plotë (më e lira)", "size": "1 kg", "category": "Pulë", "branded": false, "al": { "generic": "Pulë" }, "prices": {} },
+    { "key": "bananas-1kg", "name": "Banane", "size": "1 kg", "category": "Fruta", "branded": false, "al": { "product_ids": [295] }, "prices": {} },
+    { "key": "tomatoes-1kg", "name": "Domate (standard)", "size": "1 kg", "category": "Perime", "branded": false, "al": { "product_ids": [280] }, "prices": {} },
+    { "key": "golden-apples-1kg", "name": "Mollë Golden", "size": "1 kg", "category": "Fruta", "branded": false, "al": { "product_ids": [287] }, "prices": {} },
+    { "key": "pampers-active-baby-4", "name": "Pelena Pampers Active Baby nr. 4 (çmim për copë)", "size": "1 copë", "category": "Pelena", "branded": true, "al": { "kurse": ["Spar|PELENA PAMPERS VPP S4 MAXI 58 FIJE"], "per_unit_divisor": 58 }, "prices": {} },
+    { "key": "ariel-liquid-20-washes", "name": "Ariel i lëngshëm, 20 larje", "size": "20 larje", "category": "Detergjent", "branded": true, "al": { "kurse": ["Spar|DET.ARIEL LENG COLOR 900 ML -20 LARJE"] }, "prices": {} },
+    { "key": "dove-cream-bar-90g", "name": "Sapun Dove Cream Bar", "size": "90 g", "category": "Higjienë", "branded": true, "al": { "kurse": ["Spar|SAPUN DOVE CREAM BAR ORIGINAL 90 GR"] }, "prices": {} },
+    { "key": "palmolive-shampoo-350ml", "name": "Shampo Palmolive", "size": "350 ml", "category": "Higjienë", "branded": true, "al": { "kurse": ["Spar|SHAMPO PALMOLIVE LONG OLIVE 350 ML"] }, "prices": {} }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "as_of": "2026-10-12",
+  "note": "TVSH për ushqimet bazë në shitje me pakicë. 'basic_food' = norma që zbatohet për shumicën e produkteve të shportës (bukë, qumësht, miell, makarona, vezë, fruta/perime). Disa vende kanë norma të ndryshme për kategori të veçanta; shiko 'notes'. Rutina e përditësimit i verifikon këto vlera me burimet zyrtare.",
+  "countries": [
+    {
+      "code": "AL", "name": "Shqipëri", "group": "home", "currency": "ALL", "eurostat": "AL",
+      "vat": { "standard": 20, "basic_food": 20, "notes": "Asnjë normë e reduktuar për ushqimet. Propozime për 0%/5%/6% janë depozituar në Kuvend, por deri në korrik 2026 nuk ishin miratuar." },
+      "sources": ["https://www.balkanweb.com/?p=3041090", "https://news.bloombergtax.com/daily-tax-report-international/albania-parliament-considers-bill-to-amend-vat-act"]
+    },
+    {
+      "code": "XK", "name": "Kosovë", "group": "region", "currency": "EUR", "eurostat": "XK",
+      "vat": { "standard": 18, "basic_food": 8, "notes": "8% për drithëra dhe derivatet, vajra, bulmet, kripë, vezë dhe disa mallra të tjera bazë." },
+      "sources": ["https://vatcompliance.co/guides/vat/kosovo/"]
+    },
+    {
+      "code": "ME", "name": "Mali i Zi", "group": "region", "currency": "EUR", "eurostat": "ME",
+      "vat": { "standard": 21, "basic_food": 7, "notes": "7% për ushqimet bazë (rregullore e Administratës Tatimore). Normë 15% e shtuar nga 2025 për disa shërbime." },
+      "sources": ["https://www.vatcalc.com/montenegro/montenegro-new-15-reduced-vat-rate/", "https://www.fiscal-requirements.com/news/3636-the-tax-administration-of-montenegro-published-the-rulebook-for-products-and-services-taxed-at-a-reduced-vat-rate"]
+    },
+    {
+      "code": "MK", "name": "Maqedoni e Veriut", "group": "region", "currency": "MKD", "eurostat": "MK",
+      "vat": { "standard": 18, "basic_food": 5, "notes": "5% për ushqimet bazë; disa kategori ushqimore të tjera 10%." },
+      "sources": ["https://taxsummaries.pwc.com/north-macedonia/corporate/other-taxes", "https://www.grantthornton.global/en/insights/indirect-tax-guide/indirect-tax---North_Macedonia/"]
+    },
+    {
+      "code": "RS", "name": "Serbi", "group": "region", "currency": "RSD", "eurostat": "RS",
+      "vat": { "standard": 20, "basic_food": 10, "notes": "10% për ushqimet bazë." },
+      "sources": ["https://taxsummaries.pwc.com/serbia/corporate/other-taxes"]
+    },
+    {
+      "code": "BA", "name": "Bosnjë e Hercegovinë", "group": "region", "currency": "BAM", "eurostat": "BA",
+      "vat": { "standard": 17, "basic_food": 17, "notes": "Normë e vetme 17%, pa normë të reduktuar." },
+      "sources": ["https://taxsummaries.pwc.com/bosnia-and-herzegovina/corporate/other-taxes"]
+    },
+    {
+      "code": "EL", "name": "Greqi", "group": "eu", "currency": "EUR", "eurostat": "EL",
+      "vat": { "standard": 24, "basic_food": 13, "notes": "13% për bukë, qumësht, mish, peshk, vaj ulliri, djathë, makarona, miell, perime etj." },
+      "sources": ["https://www.aade.gr/en/services-information/useful-guides/commencement-business-activity/basic-vat-rates"]
+    },
+    {
+      "code": "IT", "name": "Itali", "group": "eu", "currency": "EUR", "eurostat": "IT",
+      "vat": { "standard": 22, "basic_food": 4, "notes": "4% për bukë, makarona, qumësht të freskët, miell, fruta dhe perime; 10% për mish, peshk dhe disa produkte të tjera." },
+      "sources": ["https://www.fiscozen.it/guide/tipologie-iva/"]
+    },
+    {
+      "code": "DE", "name": "Gjermani", "group": "eu", "currency": "EUR", "eurostat": "DE",
+      "vat": { "standard": 19, "basic_food": 7, "notes": "7% për shumicën e ushqimeve; pijet (përveç qumështit dhe disa pijeve qumështi) 19%." },
+      "sources": ["https://www.vatcalc.com/germany/germany-vat-2026-updates/"]
+    },
+    {
+      "code": "AT", "name": "Austri", "group": "eu", "currency": "EUR", "eurostat": "AT",
+      "vat": { "standard": 20, "basic_food": 4.9, "notes": "Nga 1 korrik 2026: 4,9% për qumësht, gjalpë, kos, vezë, perime, fruta, oriz, miell, makarona, bukë dhe kripë. Mishi dhe ushqimet e tjera 10%." },
+      "sources": ["https://www.vienna.at/new-rules-in-the-supermarket-this-changes-from-july/10279829", "https://www.wko.at/oe/oesterreich/oesterreich-isst-informiert-mehrwertsteuer-auf-lebensmittel"]
+    },
+    {
+      "code": "FR", "name": "Francë", "group": "eu", "currency": "EUR", "eurostat": "FR",
+      "vat": { "standard": 20, "basic_food": 5.5, "notes": "5,5% për shumicën e ushqimeve." },
+      "sources": ["https://www.impots.gouv.fr/professionnel/questions/quels-sont-les-taux-de-tva-en-vigueur-en-france-et-dans-lunion-europeenne"]
+    },
+    {
+      "code": "UK", "name": "Mbretëri e Bashkuar", "group": "eu-other", "currency": "GBP", "eurostat": "UK",
+      "vat": { "standard": 20, "basic_food": 0, "notes": "0% për shumicën e ushqimeve; 20% për ëmbëlsira, pije freskuese dhe produkte higjiene/pastrimi." },
+      "sources": ["https://www.gov.uk/guidance/food-products-and-vat-notice-70114"]
+    }
+  ],
+  "fx": {
+    "base": "EUR",
+    "as_of": "2026-10-12",
+    "source": "https://open.er-api.com/v6/latest/EUR",
+    "rates": { "EUR": 1, "ALL": 91.63, "GBP": 0.8465, "RSD": 117.38, "MKD": 61.497, "BAM": 1.95583 }
+  }
+}

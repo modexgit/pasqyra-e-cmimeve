@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="sq">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pasqyra e Çmimeve+ | Shqipëri, rajoni dhe BE</title>
+<meta name="description" content="Krahasim i pavarur i çmimeve të shportës bazë në Shqipëri (Big Market, Conad, Extramarket, Spar, Xhangolli) me rajonin dhe BE-në: çmimet, TVSH-ja, nisma KURSE dhe saktësia e të dhënave.">
+<meta property="og:title" content="Pasqyra e Çmimeve+ — Shqipëri vs rajoni dhe BE">
+<meta property="og:description" content="Sa paguajmë për ushqimet bazë, sa prej tyre është TVSH, dhe si krahasohemi me Kosovën, Italinë, Gjermaninë, Austrinë, Francën dhe Britaninë.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23c8102e'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='17' fill='white' text-anchor='middle'%3EP%2B%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="banner"><div class="wrap">Projekt i pavarur dhe jozyrtar. Nuk është i lidhur me Qeverinë Shqiptare apo me platformën zyrtare <a href="https://pasqyraecmimeve.al" rel="noopener">pasqyraecmimeve.al</a>, nga e cila merren të dhënat për Shqipërinë.</div></div>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#pasqyra"><span class="brand-mark">P+</span><span>Pasqyra e Çmimeve+<small>Shqipëri · Rajoni · BE</small></span></a>
+    <nav class="tabs" aria-label="Seksionet">
+      <a href="#pasqyra">Pasqyra</a>
+      <a href="#cmimet">Çmimet</a>
+      <a href="#tregtaret">Tregtarët</a>
+      <a href="#kurse">KURSE</a>
+      <a href="#rajoni">Rajoni & BE</a>
+      <a href="#shporta">Shporta ndërkombëtare</a>
+      <a href="#metodologjia">Metodologjia</a>
+    </nav>
+    <button class="theme-btn" id="themeBtn" type="button" aria-label="Ndrysho temën">◐</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="s-pasqyra" aria-labelledby="h-pasqyra">
+    <h1 id="h-pasqyra">Ushqimi në Shqipëri kushton sa mesatarja e BE-së. Të ardhurat jo.</h1>
+    <p class="lede" id="ledeText">Krahasojmë çmimet e shportës bazë nga supermarketet shqiptare me rajonin dhe BE-në, ndajmë sa prej çmimit është TVSH, dhe kontrollojmë nëse çmimet e deklaruara përputhen.</p>
+    <div class="grid g4" id="heroStats"></div>
+    <h2>Tri gjëra që duhet të dini</h2>
+    <div class="grid g3" id="insights"></div>
+    <h2>Çfarë ndryshoi</h2>
+    <p class="sub" id="changedSub"></p>
+    <div class="grid g2" id="changed"></div>
+  </section>
+
+  <section id="s-cmimet" hidden aria-labelledby="h-cmimet">
+    <h1 id="h-cmimet">Çmimet në Tiranë</h1>
+    <p class="sub">Çmimi final me TVSH për çdo produkt dhe tregtar, siç raportohet në pasqyraecmimeve.al. Kolona e fundit tregon sa do kushtonte i njëjti produkt me normën e TVSH-së për ushqimet të një vendi tjetër.</p>
+    <div class="controls">
+      <input type="search" id="q" placeholder="Kërko produkt ose markë…" aria-label="Kërko produkt">
+      <select id="fGroup" aria-label="Grupi"></select>
+      <select id="fSub" aria-label="Nënkategoria"></select>
+      <select id="fChain" aria-label="Tregtari"></select>
+      <select id="fVat" aria-label="TVSH e krahasimit"></select>
+    </div>
+    <div class="table-wrap"><table id="tProducts"></table></div>
+    <div class="pager" id="pProducts"></div>
+  </section>
+
+  <section id="s-tregtaret" hidden aria-labelledby="h-tregtaret">
+    <h1 id="h-tregtaret">Tregtarët</h1>
+    <p class="sub">Krahasim i drejtpërdrejtë vetëm për produktet që shiten nga të paktën dy tregtarë në Tiranë. Këto janë tregues faktikë nga të dhënat e deklaruara, jo gjykime.</p>
+    <div class="grid g2">
+      <div class="card"><h3>Sa shpesh është më i liri</h3><p class="small muted">% e produkteve të përbashkëta ku tregtari ka çmimin më të ulët</p><div class="chart" id="cCheapest"></div></div>
+      <div class="card"><h3>Sa më shtrenjtë se më i liri, mesatarisht</h3><p class="small muted">Diferenca mesatare (%) ndaj çmimit më të ulët për të njëjtin produkt</p><div class="chart" id="cPremium"></div></div>
+    </div>
+    <h2>Treguesit sipas tregtarit</h2>
+    <div class="table-wrap"><table id="tChains"></table></div>
+    <p class="small muted" style="margin-top:8px">“Përputhja KURSE”: krahasojmë çmimin e ri të KURSE me çmimin në listën javore për të njëjtin produkt dhe tregtar. “Vonesë” do të thotë që lista javore ende tregon çmimin e vjetër, para uljes.</p>
+  </section>
+
+  <section id="s-kurse" hidden aria-labelledby="h-kurse">
+    <h1 id="h-kurse">KURSE: çfarë u ul dhe sa</h1>
+    <p class="sub">Nisma vullnetare KURSE (12 tetor 2026 – 12 janar 2027). Ulja matet ndaj çmimit që i njëjti tregtar kishte para nismës, sipas deklarimit të tij.</p>
+    <div class="grid g4" id="kurseStats"></div>
+    <div class="card" style="margin-top:14px"><h3>Ulja mesatare sipas kategorisë</h3><div class="chart" id="cKurseCat"></div></div>
+    <div class="controls">
+      <input type="search" id="kq" placeholder="Kërko në KURSE…" aria-label="Kërko në KURSE">
+      <select id="kChain" aria-label="Tregtari"></select>
+      <select id="kCat" aria-label="Kategoria"></select>
+      <div class="seg" role="group" aria-label="Filtro"><button type="button" data-kf="all" aria-pressed="true">Të gjitha</button><button type="button" data-kf="food" aria-pressed="false">Vetëm ushqime</button><button type="button" data-kf="flag" aria-pressed="false">Me mospërputhje</button></div>
+    </div>
+    <div class="table-wrap"><table id="tKurse"></table></div>
+    <div class="pager" id="pKurse"></div>
+  </section>
+
+  <section id="s-rajoni" hidden aria-labelledby="h-rajoni">
+    <h1 id="h-rajoni">Shqipëria krahasuar me rajonin dhe BE-në</h1>
+    <p class="sub">Indeksi i nivelit të çmimeve (Eurostat, BE27 = 100) mat sa kushton e njëjta shportë në secilin vend, pasi çmimet konvertohen në një monedhë të përbashkët. 120 do të thotë 20% më shtrenjtë se mesatarja e BE-së.</p>
+    <div class="controls"><select id="rCat" aria-label="Kategoria"></select><span class="small muted" id="rYear"></span></div>
+    <div class="card"><div class="legend" id="rLegend"></div><div class="chart" id="cPli"></div></div>
+    <div class="grid g2" style="margin-top:14px">
+      <div class="card"><h3>Çmimet e ushqimeve kundrejt mirëqenies</h3><p class="small muted">Niveli i çmimeve të ushqimeve vs. vëllimi i konsumit për frymë (të dyja BE27 = 100, 2024)</p><div class="legend"><span><i style="background:var(--s2)"></i>Çmimet e ushqimeve</span><span><i style="background:var(--s1)"></i>Konsumi për frymë</span></div><div class="chart" id="cAfford"></div></div>
+      <div class="card"><h3>Si ka ndryshuar niveli i çmimeve të ushqimeve në Shqipëri</h3><p class="small muted">Indeksi i nivelit të çmimeve, ushqime & pije joalkoolike (BE27 = 100)</p><div class="chart" id="cTrend"></div></div>
+    </div>
+    <h2>TVSH-ja mbi ushqimet bazë</h2>
+    <p class="sub">Shqipëria është i vetmi vend në këtë krahasim që aplikon normën e plotë 20% mbi bukën, qumështin, vezët dhe miellin.</p>
+    <div class="grid g2">
+      <div class="card" id="vatBars"></div>
+      <div class="card"><h3>Sa TVSH paguan një familje në Shqipëri</h3><div id="vatCalc"></div></div>
+    </div>
+  </section>
+
+  <section id="s-shporta" hidden aria-labelledby="h-shporta">
+    <h1 id="h-shporta">Shporta ndërkombëtare</h1>
+    <p class="sub">Të njëjtat produkte (e njëjta markë dhe madhësi kur është e mundur) në supermarkete të vendeve të tjera, në euro. Çdo çmim ka burim dhe datë. Shporta përditësohet automatikisht çdo javë.</p>
+    <div class="controls">
+      <div class="seg" role="group" aria-label="Çmimi"><button type="button" data-bv="eur" aria-pressed="true">Me TVSH</button><button type="button" data-bv="eur_net" aria-pressed="false">Pa TVSH</button></div>
+      <span class="small muted" id="fxNote"></span>
+    </div>
+    <div class="table-wrap"><table id="tBasket"></table></div>
+    <p class="small muted" style="margin-top:8px">“Pa TVSH” heq normën e TVSH-së për ushqimet (ose normën standarde për produktet joushqimore) të secilit vend, që të krahasohet çmimi para taksës. Ngjyra: <span class="up">më shtrenjtë</span> / <span class="down">më lirë</span> se në Shqipëri.</p>
+  </section>
+
+  <section id="s-metodologjia" hidden aria-labelledby="h-metodologjia">
+    <h1 id="h-metodologjia">Metodologjia dhe burimet</h1>
+    <ol class="method" id="methodList"></ol>
+    <h2>Burimet</h2>
+    <ul class="method" id="sourceList"></ul>
+  </section>
+</main>
+
+<footer><div class="wrap">
+  <p>Ndërtuar nga <a href="https://modex.al" rel="noopener">Modex</a>. Kodi dhe të dhënat janë të hapura në <a href="https://github.com/modexgit/pasqyra-e-cmimeve" rel="noopener">GitHub</a>. Gjetët një gabim? <a href="https://github.com/modexgit/pasqyra-e-cmimeve/issues" rel="noopener">Na njoftoni</a>.</p>
+  <p id="footMeta"></p>
+</div></footer>
+<div id="tip" role="tooltip"></div>
+<script src="app.js"></script>
+</body>
+</html>
