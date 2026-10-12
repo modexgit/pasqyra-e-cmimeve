@@ -8,10 +8,9 @@ An independent, open-data take on Albania's official price-comparison platform
   France and the UK, plus food prices vs. consumption per head.
 - **VAT breakdown**: how much of each Albanian shelf price is VAT (20% on all food), and what the same
   product would cost under each comparison country's basic-food rate.
-- **Chain comparison**: how often Big Market, Conad, Extramarket, Spar and Xhangolli are cheapest on
-  identical products, and their average premium over the cheapest.
-- **KURSE tracking**: every before/after price in the voluntary price-cut initiative, and an automatic
-  cross-check of KURSE prices against the same chain's weekly listing.
+- **Shop-style browsing** like the official platform: categories, product cards with every chain's
+  price, filters, search, and a detail view per product.
+- **Kurse**: every before/after price in the voluntary price-reduction initiative.
 - **International basket**: the same branded products priced in supermarkets abroad, with source links.
 
 Not affiliated with the Albanian government. Albanian prices are taken from the official platform.

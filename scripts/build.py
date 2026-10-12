@@ -262,15 +262,17 @@ def basket(products: list[dict], kurse: list[dict], countries: dict) -> list[dic
     out = []
     for it in spec["items"]:
         al = it["al"]
-        ref = None
+        ref, al_ids = None, []
         if "product_ids" in al:
             ps = [by_id[i] for i in al["product_ids"] if i in by_id]
             if ps:
+                al_ids = [p["id"] for p in ps]
                 ref = {"price": min(p["min"] for p in ps), "label": ps[0]["name"], "source": "pasqyraecmimeve.al"}
         elif "generic" in al:
             ps = [p for p in products if p["sub"] == al["generic"]]
             if ps:
                 p = min(ps, key=lambda p: p["offers"][0]["unit_price"])
+                al_ids = [p["id"]]
                 ref = {"price": round(p["offers"][0]["unit_price"]), "label": f"{p['name']} (për {p['basis']})",
                        "source": "pasqyraecmimeve.al"}
         elif "kurse" in al:
@@ -280,7 +282,7 @@ def basket(products: list[dict], kurse: list[dict], countries: dict) -> list[dic
                 ref = {"price": round(ks[0]["after"] / div, 1), "label": ks[0]["name"], "source": "KURSE"}
         food = it["category"] in FOOD_CATEGORIES
         row = {"key": it["key"], "name": it["name"], "size": it["size"], "category": it["category"],
-               "branded": it["branded"], "food": food, "countries": {}}
+               "branded": it["branded"], "food": food, "al_ids": al_ids, "countries": {}}
         if ref:
             eur = ref["price"] / rates["ALL"]
             r = vat["AL"]["basic_food" if food else "standard"]
